@@ -60,7 +60,8 @@
                 <!-- Header Menu Start -->
                 <div class="header-menu d-none d-lg-block">
                     <ul class="nav-menu">
-                        @if(Auth::user()->role=='user')
+                        @if(Auth::user())
+                            @if(Auth::user()->role=='user')
                             <li><a href="{{route('taketest')}}">Take Test</a></li>
                             <li><a href="{{route('mytest')}}">My Test</a></li>
 
@@ -70,8 +71,15 @@
 
                                 <button class="btn btn-lg btn-primary" type="submit">Logout</button>
                                 </form></li>
-                        @elseif(Auth::user())
+                            @elseif(Auth::user()->role=='admin')
                             <li><a href="{{route('alltests')}}">All Results</a></li>
+                                <li class="nav-item">
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+
+                                        <button class="btn btn-lg btn-primary" type="submit">Logout</button>
+                                    </form></li>
+                            @endif
 
                         @else
 
