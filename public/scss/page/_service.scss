@@ -1,0 +1,146 @@
+/*--
+/*  4.2 - Services CSS
+/*----------------------------------------*/
+
+// Services Section 
+.service-section{
+    overflow: hidden;
+}
+
+
+// Services Wrapper 
+.services-wrapper{
+    padding-top: 50px;
+}
+
+// Single Service 
+.single-service{
+    overflow: hidden;
+    margin-top: 30px;
+
+    & .service-images{
+        & a{
+            display: block;
+            & img{
+                width: 100%;
+            }
+        }
+    }
+    & .service-content{
+        background-color: #f5f9fc;
+        padding: 45px 40px 50px;
+        transition: $transition-base;
+        position: relative;
+        z-index: 1;
+
+        @media #{$desktop-device}{
+            padding: 30px 25px 40px;
+        }
+        @media #{$tablet-device}{
+            padding: 30px 30px 40px;
+        }
+        @media #{$small-mobile}{
+            padding: 25px 30px 30px;
+        }
+
+        &::after,
+        &::before{
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 200px;
+            bottom: -80px;
+            right: -40px;
+            background-color: $white;
+            transform: rotate(42deg);
+            transition: $transition-base;
+        }
+
+        &::after{            
+            bottom: -105px;
+            right: -20px;
+        }
+
+        & .title{
+            margin-bottom: 0;
+
+            & a{
+                font-size: 26px;
+                font-weight: 700;
+
+                @media #{$desktop-device, $small-mobile}{
+                    font-size: 22px;
+                }
+            }
+        }
+        & p{
+            margin-top: 15px;
+            margin-bottom: 0;
+            transition: $transition-base;
+        }
+        & .btn{
+            height: 50px;
+            line-height: 46px;
+            background-color: #f5f9fc;
+            border: 2px solid #d5dae0;
+            color: $dark;
+            margin-top: 25px;
+            padding: 0 30px;
+        }
+        & .shape{
+            width: 255px;
+            height: 255px;
+            border-radius: 50%;
+            background-color: $white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            transition: $transition-base;
+
+            @media #{$desktop-device}{
+                width: 215px;
+                height: 215px;
+            }
+        }
+    }
+
+    &:hover{
+        & .service-content{
+            background-color: $primary;
+
+            &::before{
+                bottom: -50px;
+                right: 40px;                
+            }
+            &::after{
+                bottom: -65px;
+                right: 20px;
+                transition-delay: 0.2s;
+            }
+    
+            & .title{    
+                & a{
+                    color: $white;
+                }
+            }
+            & p{
+                color: $white;
+            }
+            & .btn{
+                background-color: $white;
+                border: 2px solid $white;
+                color: $dark;
+            }
+            & .shape{
+                opacity: 0.12;
+            }
+        }
+    }
+}
+
+
+
+
+

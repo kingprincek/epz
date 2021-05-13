@@ -1,0 +1,108 @@
+/*--
+/*  4.17 - 404 Error CSS
+/*----------------------------------------*/
+
+
+// Error Wrapper 
+.error-section{
+    position: relative;
+    z-index: 1;
+
+    & .shape-01{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        & img{
+            @media #{$desktop-device, $tablet-device}{
+                width: 286px;
+            }
+            @media #{$large-mobile}{
+                width: 186px;
+            }
+            @media #{$small-mobile}{
+                width: 146px;
+            }
+        }
+    }
+    & .shape-02{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+
+        & img{
+            @media #{$desktop-device, $tablet-device}{
+                width: 286px;
+            }
+            @media #{$large-mobile}{
+                width: 186px;
+            }
+            @media #{$small-mobile}{
+                width: 146px;
+            }
+        }
+    }
+}
+
+
+
+// Error Wrapper 
+.error-wrapper{
+    & .error-images{
+        & img{}
+    }
+    & .error-content{
+        padding-top: 10px;
+
+        & .title{
+            font-weight: 600;
+            font-size: 80px;
+            margin-bottom: 0;
+
+            @media #{$tablet-device, $large-mobile}{
+                font-size: 60px;
+            }
+            @media #{$small-mobile}{
+                font-size: 40px;
+            }
+        }
+        & .sub-title{
+            font-size: 30px;
+            font-weight: 600;
+            color: #959ba1;
+            margin-bottom: 0;
+            margin-top: 20px;
+
+            @media #{$tablet-device, $large-mobile}{
+                font-size: 26px;
+            }
+            @media #{$small-mobile}{
+                font-size: 20px;
+            }
+        }
+        & .btn{
+            margin-top: 50px;
+
+            @media #{$small-mobile}{
+                margin-top: 30px;
+            }
+
+            & i{
+                margin-left: 0;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

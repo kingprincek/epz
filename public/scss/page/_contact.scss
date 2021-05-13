@@ -1,0 +1,260 @@
+/*--
+/*  4.16 - Contact CSS
+/*----------------------------------------*/
+
+// Contact Info Section
+.contact-info-section{
+    padding-top: 70px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #e8ecef;
+}
+
+// Contact Info Wrapper 
+.contact-info-wrapper{}
+
+
+// Contact Info Color 01
+.contact-info-color-01{
+    background-color: $secondary;
+    
+    & .contact-info{
+        & .info-content{
+            & .line{
+                &::before{
+                    background-color: $secondary;
+                }
+            }
+        }
+    }
+    & > p{
+        color: #b4c4d2;
+    }
+}
+// Contact Info Color 02
+.contact-info-color-02{
+    background-color: $primary;
+
+    & .contact-info{
+        & .info-content{
+            & .line{
+                &::before{
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+    & > p{
+        color: #faf4ed;
+    }
+}
+// Contact Info Color 03
+.contact-info-color-03{
+    background-color: $dark;
+
+    & .contact-info{
+        & .info-content{
+            & .line{
+                &::before{
+                    background-color: $dark;
+                }
+            }
+        }
+    }
+    & > p{
+        color: #b4c4d2;
+    }
+}
+
+
+// Single Contact Info
+.single-contact-info{
+    padding: 70px;
+    margin-top: 30px;
+
+    @media #{$laptop-device, $small-mobile}{
+        padding: 30px;
+    }
+    @media #{$desktop-device}{
+        padding: 20px;
+    }
+    
+    & .contact-info{
+        display: flex;
+
+        @media #{$desktop-device, $small-mobile}{
+            display: block;
+        }
+
+        & .info-icon{
+            & .icon-wrapper{
+                background-color: $white;
+                width: 120px;
+                height: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                @media #{$laptop-device, $desktop-device, $small-mobile}{
+                    width: 80px;
+                    height: 80px;
+                }
+
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    right: -10px;
+                    bottom: -10px;
+                    background-color: $white;
+                    opacity: 0.1;
+                }
+
+                & img{
+                    @media #{$laptop-device, $desktop-device, $small-mobile}{
+                        width: 45px;
+                    }
+                }
+            }
+        }
+        & .info-content{
+            flex: 1;
+            padding-left: 60px;
+
+            @media #{$laptop-device}{
+                padding-left: 40px;
+            }
+            @media #{$desktop-device, $small-mobile}{
+                padding-left: 0;
+                padding-top: 35px;
+            }
+
+            & .title{
+                font-size: 32px;
+                font-weight: 700;
+                color: $white;
+                margin-bottom: 0;
+                padding-bottom: 22px;
+
+                @media #{$desktop-device, $small-mobile}{
+                    font-size: 26px;
+                }
+            }
+            & .line{
+                width: 50px;
+                height: 4px;
+                background-color: $white;
+                position: relative;
+                margin-bottom: 30px;
+    
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 5px;
+                    height: 100%;
+                    top: 0;
+                    left: 4px;
+                }
+            }
+            & p{
+                color: $white;
+                margin-bottom: 0;
+
+                & a{
+                    color: $white;
+                }
+            }
+        }
+    }
+    & > p{
+        font-size: 15px;
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+}
+
+
+// Contact Title
+.contact-title{
+    & .title{
+        font-size: 50px;
+        font-weight: 400;
+        margin-bottom: 0;
+        margin-top: -20px;
+        line-height: 1.3;
+
+        @media #{$desktop-device, $large-mobile}{
+            font-size: 36px;
+        }
+        @media #{$small-mobile}{
+            font-size: 28px;
+        }
+
+        & strong{
+            font-size: 60px;
+            font-weight: 700;
+
+            @media #{$desktop-device, $large-mobile}{
+                font-size: 40px;
+            }
+            @media #{$small-mobile}{
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+// Form Message 
+.form-message{
+    margin-bottom: 0;
+
+    &.error,
+    &.success {
+        font-size:16px;
+        color: $dark;
+        background:#ddd;
+        padding:10px 15px;
+        margin: 15px 0 0 15px;
+    }
+    &.error {
+        color:#ff0000
+    }
+}
+
+
+// Contact Wrapper 
+.contact-wrapper{
+    padding-top: 55px;
+
+    @media #{$large-mobile}{
+        padding-top: 20px;
+    }
+
+    & .single-form{
+        margin-top: 30px;
+
+        & label.error{
+            font-size: 13px;
+            color: red;
+            margin-top: 5px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

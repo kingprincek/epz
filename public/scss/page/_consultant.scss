@@ -1,0 +1,207 @@
+/*--
+/*  4.11 - Consultant CSS
+/*----------------------------------------*/
+
+
+// Consultant Wrapper
+.consultant-wrapper{
+    padding-top: 80px;
+
+    @media #{$tablet-device, $large-mobile}{
+        padding-top: 60px;
+    }
+}
+
+
+// Single Consultant
+.single-consultant{
+    position: relative;
+    overflow: hidden;
+
+    & .consultant-images{
+        position: relative;
+
+        &::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(4,91,168,0) 30%, rgba(4,91,168,1) 80%);
+            opacity: 0;
+            visibility: hidden;
+            transition: $transition-base;
+        }
+        
+        & img{
+            width: 100%;
+        }
+    }
+    & .consultant-content{
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 35px 25px;        
+
+        & .social{
+            transform: translateY(100%);
+            transition: $transition-base;
+            opacity: 0;
+            visibility: hidden;
+
+            & li{
+                display: inline-block;
+                margin: 0 6px;
+
+                & a{
+                    width: 50px;
+                    height: 50px;
+                    line-height: 48px;
+                    text-align: center;
+                    border: 1px solid $white;
+                    text-align: center;
+                    color: $white;
+                    display: block;
+                    border-radius: 50%;
+                    transition: $transition-base;
+
+                    &:hover{
+                        color: $white;
+                        background-color: $primary;
+                        border-color: $primary;
+                    }
+                }
+            }
+        }
+        & .name{
+            margin-bottom: 0;
+            transform: translateY(100%);
+            transition: $transition-base;
+            opacity: 0;
+            visibility: hidden;
+
+            & a{
+                color: $white;
+                font-size: 27px;
+                font-weight: 700;
+                margin-top: 35px;
+                display: block;
+
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+        & .designation{
+            display: block;
+            font-size: 14px;
+            color: #e3e6e8;
+            margin-top: 15px;
+            transform: translateY(100%);
+            transition: $transition-base;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &:hover{
+        & .consultant-images{    
+            &::before{
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            & img{
+                width: 100%;
+            }
+        }
+        & .consultant-content{
+            & .social{
+                transform: translateY(0);
+                transition-delay: 0.2s;
+                opacity: 1;
+                visibility: visible;
+            }
+            & .name{
+                transform: translateY(0);
+                transition-delay: 0.4s;
+                opacity: 1;
+                visibility: visible;
+            }
+            & .designation{
+                transform: translateY(0);
+                transition-delay: 0.6s;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+// Consultant Button & Pagination
+.consultant-btn-pagination{
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 40px;
+
+    @media #{$tablet-device, $large-mobile}{
+        padding-top: 10px;
+    }
+
+    & .consultant-btn{
+        padding-top: 20px;
+
+        & .btn{
+            
+        }
+    }
+    & .consultant-pagination{
+        position: relative;
+        padding-top: 10px;
+
+        & .swiper-pagination{
+            text-align: left;
+            bottom: 0;
+            left: 0;
+            position: relative;
+    
+            & .swiper-pagination-bullet{
+                outline: none;            
+                background-color: $dark;
+                transition: $transition-base;
+                opacity: 1;
+                width: 8px;
+                height: 8px;
+                position: relative;
+                margin: 0 5px;
+                display: inline-block;
+    
+                &.swiper-pagination-bullet-active{
+                    background-color: $primary;
+    
+                    &::before{
+                        border-color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

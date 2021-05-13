@@ -1,0 +1,227 @@
+/*--
+/*  5.1 - Footer Widget CSS
+/*----------------------------------------*/
+
+// Footer Widget Section 
+.footer-widget-section{
+    padding-top: 70px;
+    padding-bottom: 120px;
+    position: relative;
+
+    & .shape-01{
+        position: absolute;
+        top: 100px;
+        left: 80px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile}{
+            width: 130px;
+            top: 50px;
+            left: 30px;
+        }
+        @media #{$small-mobile}{
+            width: 100px;
+        }
+    }
+    & .shape-02{
+        position: absolute;
+        bottom: 100px;
+        right: 80px;
+
+        @media #{$laptop-device, $desktop-device, $tablet-device, $large-mobile}{
+            width: 130px;
+            bottom: 50px;
+            right: 30px;
+        }
+        @media #{$small-mobile}{
+            width: 100px;
+        }
+    }
+}
+
+// Footer Widget Title
+.footer-widget-title{
+    & .title{
+        color: $white;
+        font-weight: 700;
+        font-size: 28px;
+        margin-bottom: 0px;
+    }
+    & .line{
+        width: 50px;
+        height: 3px;
+        background-color: $primary;
+        display: block;
+        position: relative;
+        margin-top: 43px;
+
+        &::before{
+            position: absolute;
+            content: '';
+            width: 5px;
+            height: 3px;
+            background-color: $dark;
+            left: 4px;
+            top: 0;
+        }
+    }
+}
+
+// Footer Widget 
+.footer-widget{
+    margin-top: 50px;
+    
+    & .widget-map{
+        max-width: 526px;
+        height: 526px;
+        border: 1px solid #293441;
+        border-radius: 50%;
+        padding: 35px;
+        position: relative;
+
+        @media #{$desktop-device, $large-mobile }{
+            max-width: 450px;
+            height: 450px;
+        }
+        @media #{$tablet-device, $large-mobile}{
+            margin: 0 auto;
+        }
+        @media #{$small-mobile}{
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        & iframe{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: block;
+        }
+
+        & .mover-1 {
+            margin: 0 auto 0;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: $primary;
+            border-radius: 50%;
+            box-sizing: border-box;
+            transform-origin: 50% 268px;
+            animation: spin-1 7s infinite linear;
+            top: -5px;
+
+            @media #{$desktop-device, $large-mobile }{
+                transform-origin: 50% 230px;
+            }
+            @media #{$small-mobile}{
+                transform-origin: 50% 155px;
+            }
+        }
+
+        & .mover-2 {
+            margin: 0 auto 0;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: $primary;
+            border-radius: 50%;
+            box-sizing: border-box;
+            transform-origin: 50% 268px;
+            animation: spin-2 7s infinite linear;
+            top: -5px;
+
+            @media #{$desktop-device, $large-mobile }{
+                transform-origin: 50% 230px;
+            }
+            @media #{$small-mobile}{
+                transform-origin: 50% 155px;
+            }
+        }
+    }
+
+    & .footer-link{
+        padding-top: 26px;
+
+        & li{
+            margin-top: 15px;
+
+            & a{
+                font-size: 16px;
+                color: #a6afba;
+                transition: $transition-base;
+
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }   
+    
+    & .footer-info{
+        padding-top: 25px;
+
+        & li{
+            margin-top: 15px;
+        }
+    }
+    & .single-info{
+        display: flex;
+
+        & .info-icon{
+            & i{
+                color: $primary;
+                margin-top: 1px;
+                line-height: 1.8;
+            }
+        }
+        & .info-content{
+            flex: 1;
+            padding-left: 25px;
+
+            & p{
+                color: #a6afba;
+            }
+        }
+    }
+}
+
+@keyframes spin-1 { 
+    to { 
+      transform: rotate(1turn); 
+    } 
+}
+@keyframes spin-2 { 
+    to { 
+      transform: rotate(-1turn); 
+    } 
+}
+
+
+
+// Footer Widget Link 
+.footer-widget-link{
+    display: flex;
+    justify-content: space-around;
+
+    @media #{$tablet-device, $large-mobile}{
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    & .footer-widget{
+        @media #{$tablet-device, $large-mobile}{
+            width: 50%;
+        }
+        @media #{$small-mobile}{
+            width: 100%;
+        }
+    }
+}
+

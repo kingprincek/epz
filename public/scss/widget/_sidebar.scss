@@ -1,0 +1,260 @@
+/*--
+/*  5.2 - Sidebar Widget CSS
+/*----------------------------------------*/
+
+// Sidebar
+.sidebar{}
+
+// Sidebar Widget 
+.sidebar-widget{
+    margin-top: 50px;
+    background-color: #f5f9fc;
+    padding: 50px;
+
+    @media #{$desktop-device, $small-mobile}{
+        padding: 30px;
+    }
+}
+
+// Widget Title 
+.widget-title{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: -13px;
+
+    @media #{$desktop-device, $small-mobile}{
+        font-size: 30px;
+    }
+}
+
+// Widget Search 
+.widget-search{
+    position: relative;
+
+    & input{
+        width: 100%;
+        height: 65px;
+        padding: 0 15px;
+        padding-right: 75px;
+        border: 0;
+        font-size: 15px;
+        color: #6c7178;
+        transition: $transition-base;
+        border-radius: 0;
+        background-color: $white;
+
+        &:focus{
+            outline: none;
+            border-color: $primary;
+        }
+        @include placeholder{
+            opacity: 1;
+        }
+    }
+    & button{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        border: 0;
+        padding: 0;
+        width: 65px;
+        height: 65px;
+        color: $white;
+        text-align: center;
+        background-color: $secondary;
+        transition: $transition-base;
+    }    
+} 
+
+// Widget Categories 
+.widget-categories{
+    padding-top: 40px;
+
+    & li{
+        padding-top: 10px;
+
+        & a{
+            padding: 0 30px;
+            height: 65px;
+            line-height: 65px;
+            background-color: $white;
+            display: block;
+            color: #6c7178;
+
+            @media #{$small-mobile}{
+                padding: 0 20px;
+                height: 50px;
+                line-height: 50px;
+            }
+            
+            & i{
+                color: $dark;
+                margin-right: 10px;
+            }
+
+            &:hover{
+                color: $white;
+                background-color: $secondary;
+
+                & i{
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Widget Newsletter 
+.widget-newsletter{
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $primary;
+        opacity: 0.9;
+        z-index: -1;
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 340px solid transparent;
+        border-left: 273px solid $white;
+        border-bottom: 340px solid transparent;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.15;
+    }
+
+    & .widget-title{
+        color: $white;
+    }
+    
+    & .newsletter-form{
+        margin-top: 50px;
+
+        & input{
+            width: 100%;
+            height: 65px;
+            padding: 0 30px;
+            font-size: 15px;
+            color: $white;
+            transition: $transition-base;
+            background: none;
+            border: 2px solid $white;
+            border-radius: 0;
+
+            @include placeholder{
+                opacity: 1;
+                color: $white;
+            }
+
+            & + input{
+                margin-top: 20px;
+            }
+
+            &:focus{
+                outline: none;
+            }
+        }
+        & .btn{
+            margin-top: 30px;
+        }
+    }
+}
+
+// Widget Tags
+.widget-tags{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -7px;
+    margin-right: -7px;
+    padding-top: 40px;
+
+    & li{
+        padding: 10px 5px 0;
+
+        & a{
+            height: 45px;
+            line-height: 45px;
+            padding: 0 26px;
+            font-size: 15px;
+            background-color: $white;
+            display: block;
+            color: #6c7178;
+            transition: $transition-base;
+
+            @media #{$desktop-device}{
+                padding: 0 15px;
+            }
+
+            @media #{$small-mobile}{
+                padding: 0 16px;
+            }
+
+            &:hover{
+                background-color: $secondary;
+                color: $white;
+            }
+        }
+    }
+    
+}
+
+// Widget Subscribe
+.widget-subscribe{
+    margin-top: 30px;
+
+    & input{
+        width: 100%;
+        height: 50px;
+        padding: 0 20px;
+        font-size: 14px;
+        font-family: $headings-font-family;
+        font-weight: 600;
+        color: #c0c0c0;
+        transition: $transition-base;
+        border: 1px solid #d7d7d7;
+        border-radius: 0;
+        background-color: $white;
+        text-align: center;
+
+        @include placeholder{
+            opacity: 1;
+        }
+
+        &:focus{
+            border-color: $primary;
+            outline: none;
+        }
+    }
+    & .btn{
+        height: 50px;
+        line-height: 50px;
+        padding: 0 40px;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0;
+        border-radius: 0;
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+
+
+

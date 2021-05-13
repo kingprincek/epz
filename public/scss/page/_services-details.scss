@@ -1,0 +1,166 @@
+/*--
+/*  4.12 - Service Details CSS
+/*----------------------------------------*/
+
+// Service Details Wrapper 
+.service-details-wrapper{
+    position: relative;
+
+    & .service-details-images{
+        width: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @media #{$tablet-device, $large-mobile}{
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    & .video-wrapper{
+        margin-top: 45px;
+    }
+}
+
+// Service Details Content 
+.service-details-content{
+    padding-left: 50px;
+    margin-top: 30px;
+
+    @media #{$desktop-device}{
+        padding-left: 20px;
+    }
+    @media #{$tablet-device, $large-mobile}{
+        padding-left: 0;
+    }
+
+    & .main-title{
+        font-size: 50px;
+        font-weight: 700;
+        color: $dark;
+        margin-bottom: 0;
+
+        @media #{$desktop-device}{
+            font-size: 36px;
+        }
+        @media #{$large-mobile}{
+            font-size: 40px;
+        }
+        @media #{$small-mobile}{
+            font-size: 24px;
+        }
+    }
+    & .sub-title{
+        font-size: 39px;
+        font-weight: 400;
+        color: $dark;
+        margin-bottom: 0;
+        margin-top: 30px;
+
+        @media #{$desktop-device}{
+            font-size: 30px;
+        }
+        @media #{$large-mobile}{
+            font-size: 26px;
+        }
+        @media #{$small-mobile}{
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    }
+
+    & p{
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+
+    &.content-box{
+        background-color: #f5f9fc;
+        padding: 60px 100px 90px;
+        margin-top: 95px;
+        position: relative;
+
+        @media #{$desktop-device}{
+            padding: 20px 60px 50px;
+        }
+        @media #{$tablet-device}{
+            margin-top: 75px;
+        }
+        @media #{$large-mobile}{
+            margin-top: 55px;
+            padding: 10px 50px 40px;
+        }
+        @media #{$small-mobile}{
+            padding: 0 30px 25px;
+        }
+
+        &::before{
+            position: absolute;
+            content: '';
+            height: 10px;
+            left: 100px;
+            right: 100px;
+            background-color: $secondary;
+            bottom: -10px;
+        }
+
+        & .main-title{
+            margin-top: 20px;
+        }
+        & p{
+            margin-top: 20px;
+        }
+        & .content-text{
+            font-weight: 600;
+            color: $secondary;
+        }
+    }
+}
+
+// Service Details Description 
+.service-details-description{
+    padding-top: 35px;
+
+    & p{
+        margin-bottom: 0;
+        margin-top: 25px;
+    }
+
+    & .blockquote{
+        padding-left: 165px;
+        padding-top: 40px;
+        padding-bottom: 15px;
+
+        @media #{$desktop-device}{
+            padding-left: 60px;
+        }
+
+        @media #{$tablet-device, $large-mobile}{
+            padding-left: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

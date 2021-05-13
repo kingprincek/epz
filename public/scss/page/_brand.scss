@@ -1,0 +1,89 @@
+/*--
+/*  4.5 - Brand CSS
+/*----------------------------------------*/
+
+.brand-section{
+    border-bottom: 1px solid #eaeaea;
+}
+
+
+// Single Brand 
+.single-brand{
+    padding: 120px 30px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    text-align: center;
+    transition: $transition-base;
+    position: relative;
+
+    @media #{$tablet-device, $large-mobile}{
+        padding: 60px 30px;
+    }
+    @media #{$small-mobile}{
+        padding: 30px 30px;
+    }
+
+    &::after,
+    &::before{
+        position: absolute;
+        content: '';
+        width: 40px;
+        height: 40px;
+        bottom: 9px;
+        transition: $transition-base;
+        border-bottom: 1px solid $secondary;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &::before{
+        left: 10px;  
+        border-left: 1px solid $secondary;
+    }
+    &::after{
+        right: 10px;
+        border-right: 1px solid $secondary;
+    }
+
+    & .brand-logo{
+        position: relative;
+        display: inline-block;
+
+        & img{
+            transition: $transition-base;
+        }
+        & .hover{
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;   
+        }
+    }
+
+    &:hover{
+        border-color: #eaeaea;
+
+        &::after,
+        &::before{
+            opacity: 1;
+            visibility: visible;
+            bottom: -1px;
+        }
+        &::before{
+            left: -1px;   
+        }
+        &::after{
+            right: -1px;
+        }
+
+        & .brand-logo{
+            & img{}
+            & .hover{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+

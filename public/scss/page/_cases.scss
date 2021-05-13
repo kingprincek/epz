@@ -1,0 +1,244 @@
+/*--
+/*  4.4 - Cases CSS
+/*----------------------------------------*/
+
+// Cases Wrapper 
+.cases-wrapper{
+    position: relative;
+    padding-top: 80px;
+
+    @media #{$tablet-device, $large-mobile}{
+        padding-top: 60px;
+    }
+
+    & .arrow-shape{
+        position: absolute;
+        top: -20px;
+        left: -80px;
+
+        @media #{$desktop-device, $tablet-device, $large-mobile}{
+            width: 180px;
+            left: -30px;
+        }
+        @media #{$small-mobile}{
+            left: -10px;
+            width: 140px;
+            top: 0;
+        }
+    }
+
+    & .single-cases{
+        position: relative;
+        overflow: hidden;
+
+        & .cases-content{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 35px 40px;
+            text-align: right;
+            z-index: 2;
+
+            @media #{$small-mobile}{
+                padding: 15px 20px;
+            }
+
+            & .title{
+                & a{
+                    color: $white;
+                    font-size: 27px;
+                    font-weight: 700;
+                    white-space: nowrap;
+
+                    @media #{$large-mobile}{
+                        font-size: 22px;
+                    }
+                    @media #{$small-mobile}{
+                        font-size: 20px;
+                    }
+                }
+            }
+            & .tags{
+                color: #e3e6e8;
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            &::before{
+                position: absolute;
+                content: '';
+                width: 400px;
+                height: 400px;
+                background-color: $primary;
+                border-radius: 50%;
+                bottom: -215px;
+                right: -45px;
+                z-index: -1;
+
+                @media #{$large-mobile}{
+                    bottom: -250px;
+                }
+                @media #{$small-mobile}{
+                    width: 300px;
+                    height: 300px;
+                    bottom: -185px;
+                }
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                width: 400px;
+                height: 400px;
+                background-color: $secondary;
+                border-radius: 50%;
+                bottom: -215px;
+                right: -105px;
+                z-index: -1;
+
+                @media #{$large-mobile}{
+                    bottom: -250px;
+                }
+                @media #{$small-mobile}{
+                    width: 300px;
+                    height: 300px;
+                    bottom: -185px;
+                }
+            }
+        }
+    }
+
+    // Swiper Arrows
+    & .swiper-arrows{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 60px;
+
+        @media #{$tablet-device, $large-mobile}{
+            padding-top: 30px;
+        }
+
+        & .swiper-button-next,
+        & .swiper-button-prev{
+            position: relative;
+            top: 0;
+            margin-top: 0;
+            width: 55px;
+            height: 55px;
+            line-height: 51px;
+            text-align: center;
+            border: 2px solid #c9c9c9;
+            display: block;
+            left: 0;
+            right: 0;
+            margin: 0 10px;
+            color: #323232;
+            border-radius: 50%;
+            font-size: 15px;
+            transition: $transition-base;
+            outline: none;
+            opacity: 1;
+
+            @media #{$small-mobile}{
+                width: 45px;
+                height: 45px;
+                line-height: 41px;
+            }
+
+            &:hover{
+                color: $secondary;
+                border-color: $secondary;
+            }
+
+            &::after{
+                display: none;
+            }
+        }
+
+        & .swiper-button-prev{}
+    }
+
+}
+
+
+// Cases Wrapper 02
+.cases-wrapper-02{}
+
+// Single Cases 02 
+.single-cases-02{
+    position: relative;
+    margin-top: 30px;
+
+    & .cases-images{
+        & a{
+            display: block;
+            position: relative;
+            overflow: hidden;
+
+            &::before{
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(10,17,35,0) 34%, rgba(10,17,35,1) 95%);
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            & img{
+                width: 100%;
+                transition: $transition-base;
+            }
+        }
+    }
+    & .cases-content{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 25px;
+        text-align: center;
+        z-index: 1;
+        
+
+        & .title{
+            & a{
+                color: $white;
+                font-size: 27px;
+                font-weight: 700;
+
+                @media #{$desktop-device, $small-mobile}{
+                    font-size: 22px;
+                }
+
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+        & .tags{
+            color: #e3e6e8;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    &:hover{
+        & .cases-images{
+            & a{    
+                & img{
+                    transform: scale(1.1) rotate(4deg);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

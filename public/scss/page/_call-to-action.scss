@@ -1,0 +1,194 @@
+/*--
+/*  4.3 - Call to Action CSS
+/*----------------------------------------*/
+
+// Call to Action Section 
+.call-to-action-section{
+    position: relative;
+    z-index: 1;
+
+    &::before{
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 860px;
+        height: 860px;
+        background-color: $white;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0.45;
+    }
+}
+
+
+// Call to Action Title 
+.call-to-action-title{
+    text-align: center;
+    margin-top: -15px;
+
+    & .title{
+        font-size: 58px;
+        font-weight: 700;
+
+        @media #{$desktop-device, $tablet-device}{
+            font-size: 40px;
+        }
+        @media #{$large-mobile}{
+            font-size: 30px;
+        }
+        @media #{$small-mobile}{
+            font-size: 20px;
+
+            & br{
+                display: none;
+            }
+        }
+
+        & span{
+            font-style: italic;
+            color: $primary;
+        }
+    }
+}
+
+
+// Call to Action wrapper
+.call-to-action-wrapper{
+    padding-top: 80px;
+
+    @media #{$tablet-device, $large-mobile}{
+        padding-top: 50px;
+    }
+}
+
+// Call to Action Video
+.call-to-action-video{
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    & .play{
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        text-align: center;
+        font-size: 16px;
+        color: $primary;
+        background-color: $white;
+        border-radius: 50%;
+        display: inline-block;
+
+        &:hover{
+            background-color: $secondary;
+            color: $white;
+        }
+    }
+}
+
+
+// Call to Action Contact
+.call-to-action-contact{
+    background-color: $secondary;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    
+    & .cta-icon{
+        position: absolute;
+        top: 50%;
+        left: 70px;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+    & .title{
+        font-size: 40px;
+        font-weight: 700;
+        color: $white;
+        margin-bottom: 0;
+
+        @media #{$small-mobile}{
+            font-size: 28px;
+        }
+    }
+    & p{
+        font-size: 45px;
+        color: $white;
+        font-weight: 300;
+        line-height: 1.4;
+        margin-top: 21px;
+
+        @media #{$small-mobile}{
+            font-size: 30px;
+            margin-top: 11px;
+        }
+    }
+}
+
+// Call to Action Button
+.call-to-action-btn{
+    margin-top: 100px;
+
+    @media #{$tablet-device, $large-mobile}{
+        margin-top: 60px;
+    }
+}
+
+
+// Call to Action Contact 02
+.call-to-action-section-02{
+    background-color: $secondary;
+    padding-bottom: 60px;
+    padding-top: 10px;
+}
+
+// Call to Action Contact 02
+.call-to-action-contact-02{
+    margin-top: 35px;
+
+    & .title{
+        font-size: 55px;
+        font-weight: 400;
+        color: $white;
+        margin-bottom: 0;
+
+        @media #{$desktop-device, $large-mobile}{
+            font-size: 44px;
+        }
+        @media #{$small-mobile}{
+            font-size: 30px;
+        }
+
+        & span{
+            font-size: 60px;
+            font-weight: 700;
+
+            @media #{$desktop-device, $large-mobile}{
+                font-size: 50px;
+            }
+            @media #{$small-mobile}{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+// Call to Action Button 02
+.call-to-action-btn-02{
+    text-align: right;
+    margin-top: 50px;
+
+    @media #{$tablet-device, $large-mobile}{
+        text-align: left;
+    }
+
+    & .btn{}
+}
