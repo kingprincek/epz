@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Youth Economic Forum</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@
             <div class="header-wrapper">
                 <!-- Header Logo Start -->
                 <div class="header-btn d-none d-lg-block">
-                    <a href="#" class="btn btn-primary btn-hover-secondary">EPZ GLOBAL</a>
+                    <a href="#" class="btn btn-primary btn-hover-secondary">Youth Economic Forum</a>
                 </div>
                 <!-- Header Logo End -->
 
@@ -62,8 +62,8 @@
                     <ul class="nav-menu">
                         @if(Auth::user())
                             @if(Auth::user()->role=='user')
-                            <li><a href="{{route('taketest')}}">Take Test</a></li>
-                            <li><a href="{{route('mytest')}}">My Test</a></li>
+                            <li><a href="{{route('taketest')}}">Register</a></li>
+                            <li><a href="{{route('mytest')}}">Profile</a></li>
 
                             <li class="nav-item">
                                 <form method="POST" action="{{ route('logout') }}">
@@ -82,7 +82,10 @@
                             @endif
 
                         @else
+                            <li><a href="#about">About Us</a></li>
 
+                            <li><a href="#programme">Programme Details</a></li>
+                            <li><a href="#speaker">Speakers</a></li>
                         <li><a href="{{route('login')}}">Login</a></li>
 
                         <li><a href="{{route('register')}}">Register</a></li>
@@ -188,9 +191,9 @@
                         <!-- Slider Content Start -->
                         <div class="slider-content">
                             <div class="content-wrapper">
-                                <h5 class="sub-title">OVER 28+ YEARS OF EXPERIENCE</h5>
-                                <h1 class="main-title"> <strong>Consulting</strong> for your future plan</h1>
-                                <a class="btn btn-outline-light" href="#">All Solution <i class="icofont-double-right"></i></a>
+                                <h5 class="sub-title"></h5>
+                                <h1 class="main-title"> <strong>YOUTH ECONOMIC FORUM</strong> 2021</h1>
+                                <a class="btn btn-outline-light" href="#">March 5 - 6, 2021<i class="icofont-double-right"></i></a>
                             </div>
                         </div>
                         <!-- Slider Content End -->
@@ -213,39 +216,6 @@
                 </div>
                 <!-- Single Slider End -->
 
-                <!-- Single Slider Start -->
-                <div class="swiper-slide single-slider animation-style-01">
-
-                    <!-- Slider Left Start -->
-                    <div class="slider-left">
-
-                        <!-- Slider Content Start -->
-                        <div class="slider-content">
-                            <div class="content-wrapper">
-                                <h5 class="sub-title">OVER 28+ YEARS OF EXPERIENCE</h5>
-                                <h1 class="main-title"> <strong>Consulting</strong> for your future plan</h1>
-                                <a class="btn btn-outline-light" href="#">All Solution <i class="icofont-double-right"></i></a>
-                            </div>
-                        </div>
-                        <!-- Slider Content End -->
-
-                    </div>
-                    <!-- Slider Left End -->
-
-                    <!-- Slider Right Start -->
-                    <div class="slider-right">
-
-                        <!-- Slider Images Start -->
-                        <div class="slider-images">
-                            <img src="{{ asset('images/slider/slider-2.png')}}" alt="Slider Images">
-                        </div>
-                        <!-- Slider Images End -->
-
-                    </div>
-                    <!-- Slider Right End -->
-
-                </div>
-                <!-- Single Slider End -->
 
                 <!-- Single Slider Start -->
                 <div class="swiper-slide single-slider animation-style-01">
@@ -256,9 +226,10 @@
                         <!-- Slider Content Start -->
                         <div class="slider-content">
                             <div class="content-wrapper">
-                                <h5 class="sub-title">OVER 28+ YEARS OF EXPERIENCE</h5>
-                                <h1 class="main-title"> <strong>Consulting</strong> for your future plan</h1>
-                                <a class="btn btn-outline-light" href="#">All Solution <i class="icofont-double-right"></i></a>
+                                <h5 class="sub-title"></h5>
+                                <h1 class="main-title"> <strong>YOUTH ECONOMIC FORUM
+                                    </strong> 2021</h1>
+                                <a class="btn btn-outline-light" href="#">March 5 - 6, 2021<i class="icofont-double-right"></i></a>
                             </div>
                         </div>
                         <!-- Slider Content End -->
@@ -290,28 +261,89 @@
     <!-- Slider Section End -->
 
     <!-- Service Section Start -->
-    <div class="section section-padding service-section">
+    <div class="section section-padding service-section" id="about" style="padding-top: 40px !important;">
         <div class="container">
 
             <!-- Section Title Start -->
             <div class="section-title shape text-center">
-                <h5 class="sub-title">Consulting <span> Services</span></h5>
-                <h2 class="main-title">EPZ GLOBAL Services</h2>
+{{--                <h5 class="sub-title">Consulting <span> Services</span></h5>--}}
+                <h2 class="main-title">Youth Economic Forum</h2>
+
+               <div class="row">
+                   <div class="col-lg-4 col-md-4" style="border-right: #0a1242 4px solid">
+                       <h2 class="title" style="margin: 50%">Association Summary</h2>
+                   </div>
+
+                   <div class="col-lg-8 col-md-8">
+
+                       <!-- Services Wrapper Start -->
+                       <div class="single-service" data-aos="fade-up" data-aos-delay="300">
+                           <div class="service-content">
+
+                               <p style="text-align: justify">
+                                   Taking into consideration the failure of traditional charity to enable people to solve their own problems over the
+                                   long term, prompted by the spirit of selflessness, we do hereby pledge our commitment to form an organization, which make use
+                                   of new blended financing development models, that is, patient capital, philanthropic funds and private sector investment combinations as a development tool. At the heart of this organization is a new commitment by young people to strive together for a better Zimbabwe and Africa as whole. Our organisation was founded on the, 18th of April, 2021 on the day of Zimbabwe’s National Independence day brought about by an organised militant effort by young people such as ourselves in bringing sovereignty to the natives of the land. Our revolution is intellectual, as we believe that continued economic growth requires that we intelligently package our ideas to the betterment of the development of Zimbabwe and Africa at large! As such we are an apolitical organisation
+                                   focused on affirmative action of youth inclusion in the economics of the country and continent as a whole.
+                               </p>
+
+                               <div class="shape"></div>
+                           </div>
+                       </div>
+                       <!-- Services Wrapper end -->
+
+                   </div>
+               </div>
+                <div class="row" style="margin-top: 20px">
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-4" style="border-right: #0a1242 4px solid">
+                        <h2 class="title" style="margin: 50%">Our Objectives</h2>
+                    </div>
+
+                    <div class="col-lg-8 col-md-8">
+
+                        <!-- Services Wrapper Start -->
+                        <div class="single-service" data-aos="fade-up" data-aos-delay="300">
+                            <div class="service-content">
+
+                                <p style="text-align: justify">
+                                    <ul style="list-style: lower-roman">
+                                    <li>To involve the youth of Zimbabwe in economic development and governance by creating a forum for constructive, fact-based discussions on economic, social and developmental issues for as well as linking the public sector,
+                                        private sector and the International world with the youth.</li>
+                                    <li>To engage in projects for the mass creation of jobs and development of communities in which the enterprise is undertaken.</li>
+                                    <li>To enter into strategic partnerships that achieve an acceleration of youth enterprise growth and recognition.</li>
+                                </ul>
+                                </p>
+
+                                <div class="shape"></div>
+                            </div>
+                        </div>
+                        <!-- Services Wrapper end -->
+
+                    </div>
+                </div>
+
             </div>
             <!-- Section Title End -->
 
             <!-- Services Wrapper Start -->
-            <div class="services-wrapper">
+            <div class="services-wrapper" id="speaker">
                 <div class="row gx-10">
+                    <div class="cases-content">
+                        <h3 class="title"><a href="#">Speakers</a></h3>
+                    </div>
                     <div class="col-lg-4 col-md-6">
 
                         <!-- Services Wrapper Start -->
                         <div class="single-service" data-aos="fade-up" data-aos-delay="200">
                             <div class="service-images">
-                                <a href="services-details.html"><img src="{{ asset('images/services/services-1.jpg')}}" alt="Services"></a>
+                                <a href=""><img src="{{ asset('images/services/services-1.jpg')}}" alt="Services"></a>
                             </div>
                             <div class="service-content">
-                                <h4 class="title"><a href="services-details.html">Human Resources</a></h4>
+                                <h4 class="title"><a href="services-details.html">Simba Gwenzi</a></h4>
                                 <p>Lorem Ipsum is simply dummy text the printing and typesetting industry been the industry's sandard.</p>
                                 <a href="services-details.html" class="btn">Details +</a>
                                 <div class="shape"></div>
@@ -328,7 +360,7 @@
                                 <a href="services-details.html"><img src="{{ asset('images/services/services-2.jpg')}}" alt="Services"></a>
                             </div>
                             <div class="service-content">
-                                <h4 class="title"><a href="services-details.html">Business Planning</a></h4>
+                                <h4 class="title"><a href="services-details.html">Simba Gwenzi</a></h4>
                                 <p>Lorem Ipsum is simply dummy text the printing and typesetting industry been the industry's sandard.</p>
                                 <a href="services-details.html" class="btn">Details +</a>
                                 <div class="shape"></div>
@@ -345,7 +377,7 @@
                                 <a href="services-details.html"><img src="{{ asset('images/services/services-3.jpg')}}" alt="Services"></a>
                             </div>
                             <div class="service-content">
-                                <h4 class="title"><a href="services-details.html">Insurance Consulting</a></h4>
+                                <h4 class="title"><a href="services-details.html">Simba Gwenzi</a></h4>
                                 <p>Lorem Ipsum is simply dummy text the printing and typesetting industry been the industry's sandard.</p>
                                 <a href="services-details.html" class="btn">Details +</a>
                                 <div class="shape"></div>
@@ -362,55 +394,6 @@
     </div>
     <!-- Service Section End -->
 
-    <!-- Call to Action Section Start -->
-    <div class="section section-padding overflow-hidden call-to-action-section bg-color-01">
-        <div class="container">
-
-            <!-- Call to Action title Start -->
-            <div class="call-to-action-title">
-                <h2 class="title">You get perfect advice <br> from EPZ GLOBAL for <span>your business</span> <br> and others plan.</h2>
-            </div>
-            <!-- Call to Action title End -->
-
-            <!-- Call to Action Wrapper Start -->
-            <div class="call-to-action-wrapper" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gx-0">
-                    <div class="col-lg-6">
-
-                        <!-- Call to Action Video Start -->
-                        <div class="call-to-action-video" style="background-image: url({{ asset('images/cta.jpg')}});">
-                            <a class="play video-popup" href="https://www.youtube.com/watch?v=_OXPoubiFF0"><i class="icofont-ui-play"></i></a>
-                        </div>
-                        <!-- Call to Action Video End -->
-
-                    </div>
-                    <div class="col-lg-6">
-
-                        <!-- Call to Action Contact Start -->
-                        <div class="call-to-action-contact">
-                            <img class="cta-icon" src="{{ asset('images/telephone.png')}}" alt="Telephone">
-
-                            <div class="contact-wrapper-02 text-center">
-                                <h3 class="title">Contact Us</h3>
-                                <p>+88 957 436 97</p>
-                            </div>
-                        </div>
-                        <!-- Call to Action Contact End -->
-
-                    </div>
-                </div>
-            </div>
-            <!-- Call to Action Wrapper End -->
-
-            <!-- Call to Action button Start -->
-            <div class="call-to-action-btn text-center">
-                <a class="btn btn-primary btn-hover-secondary" href="#">Our Speaker <i class="icofont-double-right"></i></a>
-            </div>
-            <!-- Call to Action button End -->
-
-        </div>
-    </div>
-    <!-- Call to Action Section End -->
 
     <!-- Why Choose Us Section Start -->
     <div class="section section-padding why-choose-section mt-n10">
@@ -419,12 +402,15 @@
                 <div class="col-lg-6">
 
                     <!-- Why Choose Content Start -->
-                    <div class="why-choose-content" data-aos="fade-right" data-aos-delay="200">
+                    <div class="why-choose-content" id="programme" data-aos="fade-right" data-aos-delay="200">
 
                         <!-- Why Choose Title Start -->
                         <div class="why-choose-title">
-                            <h6 class="sub-title">Why Choose <span>Us?</span></h6>
-                            <h2 class="main-title"> <span>Fasted improving</span> your business with EPZ GLOBAL.</h2>
+                            <h2 class="title">Programme</h2>
+                            <p class="">2020 may prove to be a watershed moment that defines the 21st century as the
+                                world witness a microorganism as small as 120/1,000,000 of a metre (120 nanometre), brought a global economy as
+                                large as USD85 trillion into a standstill. Coupled with absent global leadership and cooperation, an escalating trade war and rising geopolitical tension between Washington and Beijing,
+                                the global COVID-19 pandemic has created a world that is seemingly in a structural break.</p>
                         </div>
                         <!-- Why Choose Title End -->
 
@@ -437,8 +423,8 @@
                                     <img src="{{ asset('images/icon/icon-1.png')}}" alt="Icon">
                                 </div>
                                 <div class="item-content">
-                                    <h4 class="title"><span>3000+</span> Trusted Customer</h4>
-                                    <p>Lorem Ipsum is simply dummy text the printing and typesetting industry the industry.</p>
+                                    <h4 class="title"><span>0800 - 0805  (GMT +2)</span> Welcome Remarks</h4>
+                                    <p> , Director, Youth Economic Forum 2021</p>
                                 </div>
                             </div>
                             <!-- Single Items End -->
@@ -449,8 +435,9 @@
                                     <img src="{{ asset('images/icon/icon-2.png')}}" alt="Icon">
                                 </div>
                                 <div class="item-content">
-                                    <h4 class="title"><span>190+</span> Experienced Speaker</h4>
-                                    <p>Lorem Ipsum is simply dummy text the printing and typesetting industry the industry.</p>
+                                    <h4 class="title"><span>0800 - 0805  (GMT +2)+</span> The Economic Agenda:</h4>
+                                    <p>The World in a Structural Break: A New Direction for Emerging Economies
+                                    </p>
                                 </div>
                             </div>
                             <!-- Single Items End -->
@@ -461,8 +448,8 @@
                                     <img src="{{ asset('images/icon/icon-3.png')}}" alt="Icon">
                                 </div>
                                 <div class="item-content">
-                                    <h4 class="title"><span>24/7</span> Customer Support</h4>
-                                    <p>Lorem Ipsum is simply dummy text the printing and typesetting industry the industry.</p>
+                                    <h4 class="title"><span>0800 - 0805 </span> Keynote Address by the Minister of Youth and Sport</h4>
+                                    <p>.</p>
                                 </div>
                             </div>
                             <!-- Single Items End -->
@@ -498,8 +485,8 @@
 
             <!-- Section Title Start -->
             <div class="section-title shape text-center">
-                <h5 class="sub-title">Complete <span> Cases</span></h5>
-                <h2 class="main-title">Our Successful Cases</h2>
+                <h5 class="sub-title">Past <span> Events</span></h5>
+                <h2 class="main-title"> Follow Our Journey</h2>
             </div>
             <!-- Section Title End -->
 
@@ -551,10 +538,54 @@
         </div>
     </div>
     <!-- Cases Section End -->
+    <!-- Call to Action Section Start -->
+    <div class="section section-padding overflow-hidden call-to-action-section bg-color-01">
+        <div class="container">
+
+            <!-- Call to Action title Start -->
+            <div class="call-to-action-title">
+                <h2 class="title">Contact Information.</h2>
+            </div>
+            <!-- Call to Action title End -->
+
+            <!-- Call to Action Wrapper Start -->
+            <div class="call-to-action-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gx-0">
+                    <div class="col-lg-6">
+
+                        <!-- Call to Action Video Start -->
+                        <div class="call-to-action-video" style="background-image: url({{ asset('images/cta.jpg')}});">
+                            <a class="play video-popup" href="https://www.youtube.com/watch?v=_OXPoubiFF0"><i class="icofont-ui-play"></i></a>
+                        </div>
+                        <!-- Call to Action Video End -->
+
+                    </div>
+                    <div class="col-lg-6">
+
+                        <!-- Call to Action Contact Start -->
+                        <div class="call-to-action-contact">
+                            <img class="cta-icon" src="{{ asset('images/telephone.png')}}" alt="Telephone">
+
+                            <div class="contact-wrapper-02 text-center">
+                                <h3 class="title">Contact Us</h3>
+                                <p>+263 957 436 97</p>
+                            </div>
+                        </div>
+                        <!-- Call to Action Contact End -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- Call to Action Wrapper End -->
+
+        </div>
+    </div>
+    <!-- Call to Action Section End -->
 
     <!-- Brand Section Start -->
     <div class="section brand-section">
         <div class="container">
+            <h2 class="title">Partners</h2>
             <div class="row gx-0 row-cols-2 row-cols-sm-4 ">
                 <div class="col">
                     <div class="single-brand">
@@ -604,7 +635,7 @@
                     <div class="col-md-4">
                         <!-- Footer Logo Start -->
                         <div class="footer-logo">
-                            <a href="index.html"><img src="{{ asset('images/logo-2.png')}}" alt="Logo"></a>
+                            <a href=""><img src="{{ asset('images/logo-2s.png')}}" alt="YEF"></a>
                         </div>
                         <!-- Footer Logo End -->
                     </div>
@@ -616,7 +647,7 @@
                             </div>
                             <div class="call-content">
                                 <h5 class="title">Call Us:</h5>
-                                <p>+00 569 754 87</p>
+                                <p>+263 569 754 87</p>
                             </div>
                         </div>
                         <!-- Footer Call End -->
@@ -703,7 +734,7 @@
                                                 <i class="icofont-envelope-open"></i>
                                             </div>
                                             <div class="info-content">
-                                                <p><a href="mailto:EPZ GLOBAL@gmail.com">EPZ GLOBAL@gmail.com</a></p>
+                                                <p><a href="mailto:BAL@gmail.com">@gmail.com</a></p>
                                             </div>
                                         </div>
                                     </li>
@@ -713,7 +744,7 @@
                                                 <i class="icofont-google-map"></i>
                                             </div>
                                             <div class="info-content">
-                                                <p>(352) 518-9735 <br> 13917 Wilson St <br> Florida(FL), 33525</p>
+                                                <p>263 <br> 13917 Harare St <br> Harare(FL), 33525</p>
                                             </div>
                                         </div>
                                     </li>
@@ -740,7 +771,7 @@
 
                     <!-- Footer Copyright Start -->
                     <div class="copyright-text">
-                        <p>&copy; 2021 <span> EPZ GLOBAL </span> Made with <i class="icofont-heart-alt"></i> by <a href="#" target="_blank">Prince K Rupiya</a></p>
+                        <p>&copy; 2021 <span> YEF </span> Made with <i class="icofont-heart-alt"></i> by <a href="#" target="_blank">Bint</a></p>
                     </div>
                     <!-- Footer Copyright End -->
 

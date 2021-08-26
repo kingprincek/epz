@@ -31,12 +31,20 @@ Route::post('/email/verification-notification', function (Request $request) {
     return back()->with('message', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
-Route::get('/', function () {
+Route::get('/', \App\Http\Livewire\Home::class)->name('home');
+Route::get('/about', \App\Http\Livewire\About::class)->name('about');
+Route::get('/yef', \App\Http\Livewire\Yef::class)->name('yef');
+Route::get('/contact', \App\Http\Livewire\Contact::class)->name('contact');
+Route::get('/services', \App\Http\Livewire\Services::class)->name('services');
+
+Route::get('/yef-section', function () {
     return view('welcome');
-});
+})->name('yef-section');
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('welcome');
+    return view('dashboard');
 })->name('dashboard');
 
 

@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Http\Livewire;
+
+use Livewire\Component;
+
+class About extends Component
+{
+    /**
+     * @return mixed
+     */
+    public function render()
+    {
+        return view('livewire.about')->layout('layouts.front');
+    }
+}

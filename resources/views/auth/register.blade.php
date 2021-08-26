@@ -13,7 +13,7 @@
 
                 <div class="d-flex justify-content-center mb-5 navbar-light">
                     <a href="/"
-                       class="navbar-brand m-0">EPZ GLOBAL</a>
+                       class="navbar-brand m-0">YEC</a>
                 </div>
                 <div class="card navbar-shadow">
                     <div class="card-header text-center">
